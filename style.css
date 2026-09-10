@@ -618,23 +618,30 @@ footer {
 }
 
 
-/* conteúdo */
+/* conteúdo do rodapé */
 
 .footer-conteudo {
 
     width: min(1180px, 92%);
 
-    min-height: 80px;
+    min-height: 65px;
 
     margin: auto;
 
     display: flex;
 
+    flex-direction: column;
+
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: center;
 
-    gap: 20px;
+    gap: 2px;
+
+    padding:
+        8px 0;
+
+    text-align: center;
 }
 
 
@@ -646,13 +653,19 @@ footer {
 
     flex-direction: column;
 
-    gap: 4px;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    text-align: center;
 }
 
 .footer-esquerda strong {
 
     font-size:
-        0.95rem;
+        0.9rem;
 }
 
 .footer-esquerda span {
@@ -661,7 +674,7 @@ footer {
         rgba(255, 255, 255, 0.65);
 
     font-size:
-        0.8rem;
+        0.75rem;
 }
 
 
@@ -673,13 +686,17 @@ footer {
 
     align-items: center;
 
-    gap: 9px;
+    justify-content: center;
+
+    gap: 7px;
 
     color:
         rgba(255, 255, 255, 0.65);
 
     font-size:
-        0.8rem;
+        0.72rem;
+
+    text-align: center;
 }
 
 .ponto {
@@ -688,7 +705,7 @@ footer {
         var(--azul-claro);
 
     font-size:
-        15px;
+        13px;
 }
 
 
@@ -868,34 +885,63 @@ footer {
     }
 
 
-    /* RODAPÉ */
+    /* ================================
+       RODAPÉ MOBILE
+    ================================ */
 
     .footer-conteudo {
 
         width: 92%;
 
         min-height:
-            100px;
+            65px;
 
         padding:
-            18px 0;
+            8px 0;
+
+        display: flex;
 
         flex-direction:
             column;
 
         align-items:
-            flex-start;
+            center;
 
         justify-content:
             center;
 
-        gap: 8px;
+        gap:
+            2px;
+
+        text-align:
+            center;
+    }
+
+    .footer-esquerda {
+
+        width:
+            100%;
+
+        align-items:
+            center;
+
+        text-align:
+            center;
     }
 
     .footer-direita {
 
+        width:
+            100%;
+
+        justify-content:
+            center;
+
+        text-align:
+            center;
+
         font-size:
-            0.75rem;
+            0.7rem;
     }
 
 
@@ -994,9 +1040,39 @@ footer {
             0.7rem;
     }
 
+
+    /* RODAPÉ */
+
     .footer-conteudo {
 
+        min-height:
+            60px;
+
+        padding:
+            7px 0;
+
         align-items:
+            center;
+
+        justify-content:
+            center;
+
+        text-align:
+            center;
+    }
+
+    .footer-esquerda {
+
+        align-items:
+            center;
+
+        text-align:
+            center;
+    }
+
+    .footer-direita {
+
+        justify-content:
             center;
 
         text-align:
