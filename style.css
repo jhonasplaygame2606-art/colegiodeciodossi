@@ -1,0 +1,1006 @@
+/* ================================
+   CORES
+================================ */
+
+:root {
+
+    --azul: #183c63;
+    --azul-claro: #3782d2;
+
+    --fundo: #f7f8fa;
+    --card: #ffffff;
+
+    --texto: #171717;
+    --texto-secundario: #60656b;
+
+    --borda: #e5e7eb;
+
+    --branco: #ffffff;
+
+}
+
+
+/* ================================
+   TEMA ESCURO
+================================ */
+
+.tema-escuro {
+
+    --azul: #111827;
+    --fundo: #101214;
+    --card: #181b1f;
+
+    --texto: #f5f5f5;
+    --texto-secundario: #b8bcc2;
+
+    --borda: #2c3035;
+}
+
+
+/* ================================
+   GERAL
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--fundo);
+
+    color:
+        var(--texto);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+header {
+
+    background:
+        var(--azul);
+
+    color:
+        white;
+
+    border-bottom:
+        3px solid var(--azul-claro);
+}
+
+
+/* conteúdo do cabeçalho */
+
+.header-conteudo {
+
+    width: min(1180px, 92%);
+
+    min-height: 145px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    padding: 22px 0;
+}
+
+
+/* ================================
+   LOGOS
+================================ */
+
+.header-imagens {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.header-imagens img {
+
+    width: 68px;
+
+    height: 68px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    padding: 5px;
+
+    cursor: zoom-in;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.header-imagens img:hover {
+
+    transform:
+        scale(1.04);
+
+    background:
+        rgba(255, 255, 255, 0.14);
+}
+
+
+/* linha */
+
+.linha-header {
+
+    width: 1px;
+
+    height: 65px;
+
+    background:
+        rgba(255, 255, 255, 0.25);
+}
+
+
+/* ================================
+   TEXTO HEADER
+================================ */
+
+.header-texto {
+
+    flex: 1;
+}
+
+.header-texto h1 {
+
+    margin:
+        0 0 6px;
+
+    font-size:
+        clamp(1.7rem, 3vw, 2.35rem);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+.header-texto .subtitulo {
+
+    margin:
+        0 0 4px;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+}
+
+.header-texto .descricao {
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 0.92rem;
+}
+
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+main {
+
+    width: min(1250px, 92%);
+
+    margin:
+        0 auto;
+
+    padding:
+        35px 0 85px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ================================
+   ARTIGOS
+================================ */
+
+article {
+
+    background:
+        var(--card);
+
+    border:
+        1px solid var(--borda);
+
+    border-radius:
+        12px;
+
+    padding:
+        22px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+article:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #cbd5e1;
+}
+
+
+/* ================================
+   AUTOR
+================================ */
+
+.artigo-autor {
+
+    margin:
+        0 0 16px;
+
+    padding-bottom:
+        12px;
+
+    border-bottom:
+        1px solid var(--borda);
+
+    color:
+        var(--texto);
+
+    font-size:
+        0.84rem;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.4;
+}
+
+
+/* ================================
+   TEXTOS
+================================ */
+
+article p:not(.artigo-autor) {
+
+    margin:
+        0 0 17px;
+
+    color:
+        var(--texto-secundario);
+
+    font-size:
+        0.97rem;
+
+    line-height:
+        1.7;
+}
+
+article h2 {
+
+    margin:
+        3px 0 10px;
+
+    font-size:
+        1.15rem;
+}
+
+
+/* ================================
+   IMAGENS
+================================ */
+
+.imagem-expandir {
+
+    display: block;
+
+    width: auto;
+
+    max-width: 100%;
+
+    max-height: 260px;
+
+    margin:
+        8px auto 18px;
+
+    object-fit: contain;
+
+    border-radius:
+        9px;
+
+    cursor: zoom-in;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.imagem-expandir:hover {
+
+    transform:
+        scale(1.02);
+}
+
+
+/* ================================
+   REAÇÕES
+================================ */
+
+.botoes-reacao {
+
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: auto;
+
+    padding-top: 10px;
+}
+
+.botao-reacao {
+
+    border:
+        1px solid var(--borda);
+
+    background:
+        transparent;
+
+    color:
+        var(--texto);
+
+    border-radius:
+        8px;
+
+    padding:
+        7px 11px;
+
+    font-size:
+        14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.botao-reacao:hover {
+
+    background:
+        var(--fundo);
+
+    transform:
+        translateY(-1px);
+}
+
+.botao-reacao:active {
+
+    transform:
+        scale(0.95);
+}
+
+
+/* ================================
+   BOTÃO TEMA
+================================ */
+
+.btn-tema-escuro {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border:
+        1px solid var(--borda);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--card);
+
+    color:
+        var(--texto);
+
+    font-size:
+        19px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.12);
+
+    z-index: 1000;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.btn-tema-escuro:hover {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* ================================
+   VISUALIZADOR DE IMAGEM
+================================ */
+
+.visualizador-imagem {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.92);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    z-index: 99999;
+
+    cursor: zoom-out;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.visualizador-imagem.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* imagem grande */
+
+.imagem-grande {
+
+    max-width: 94vw;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius:
+        8px;
+
+    cursor: default;
+
+    animation:
+        aparecer 0.2s ease;
+}
+
+
+/* botão fechar */
+
+.fechar-imagem {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color:
+        white;
+
+    font-size:
+        19px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease;
+}
+
+.fechar-imagem:hover {
+
+    background:
+        rgba(255, 255, 255, 0.25);
+}
+
+
+/* animação */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* bloquear página */
+
+body.imagem-aberta {
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   RODAPÉ
+================================ */
+
+footer {
+
+    background:
+        var(--azul);
+
+    color:
+        white;
+
+    border-top:
+        3px solid var(--azul-claro);
+}
+
+
+/* conteúdo */
+
+.footer-conteudo {
+
+    width: min(1180px, 92%);
+
+    min-height: 80px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* lado esquerdo */
+
+.footer-esquerda {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.footer-esquerda strong {
+
+    font-size:
+        0.95rem;
+}
+
+.footer-esquerda span {
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size:
+        0.8rem;
+}
+
+
+/* lado direito */
+
+.footer-direita {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size:
+        0.8rem;
+}
+
+.ponto {
+
+    color:
+        var(--azul-claro);
+
+    font-size:
+        15px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+    main {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 700px) {
+
+    header {
+
+        border-bottom-width:
+            2px;
+    }
+
+
+    /* HEADER MOBILE */
+
+    .header-conteudo {
+
+        width: 92%;
+
+        min-height: auto;
+
+        padding:
+            18px 0;
+
+        gap: 15px;
+
+        display: grid;
+
+        grid-template-columns:
+            auto 1fr;
+
+        align-items: center;
+    }
+
+
+    /* logos */
+
+    .header-imagens {
+
+        gap: 6px;
+    }
+
+    .header-imagens img {
+
+        width: 48px;
+
+        height: 48px;
+
+        padding: 3px;
+
+        border-radius: 8px;
+    }
+
+
+    /* esconder linha no celular */
+
+    .linha-header {
+
+        display: none;
+    }
+
+
+    /* texto */
+
+    .header-texto {
+
+        min-width: 0;
+    }
+
+    .header-texto h1 {
+
+        margin:
+            0 0 5px;
+
+        font-size:
+            1.2rem;
+
+        line-height:
+            1.2;
+    }
+
+    .header-texto .subtitulo {
+
+        margin:
+            0 0 2px;
+
+        font-size:
+            0.82rem;
+    }
+
+    .header-texto .descricao {
+
+        font-size:
+            0.72rem;
+
+        line-height:
+            1.3;
+    }
+
+
+    /* CONTEÚDO */
+
+    main {
+
+        width: 92%;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 14px;
+
+        padding:
+            22px 0 75px;
+    }
+
+
+    /* ARTIGOS */
+
+    article {
+
+        padding:
+            18px;
+
+        border-radius:
+            10px;
+    }
+
+    article p:not(.artigo-autor) {
+
+        font-size:
+            0.94rem;
+
+        line-height:
+            1.65;
+    }
+
+
+    /* IMAGENS */
+
+    .imagem-expandir {
+
+        max-height:
+            240px;
+
+        margin:
+            6px auto 16px;
+    }
+
+
+    /* REAÇÕES */
+
+    .botao-reacao {
+
+        padding:
+            7px 10px;
+
+        font-size:
+            13px;
+    }
+
+
+    /* RODAPÉ */
+
+    .footer-conteudo {
+
+        width: 92%;
+
+        min-height:
+            100px;
+
+        padding:
+            18px 0;
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        justify-content:
+            center;
+
+        gap: 8px;
+    }
+
+    .footer-direita {
+
+        font-size:
+            0.75rem;
+    }
+
+
+    /* BOTÃO TEMA */
+
+    .btn-tema-escuro {
+
+        right:
+            14px;
+
+        bottom:
+            14px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            17px;
+    }
+
+
+    /* VISUALIZADOR */
+
+    .visualizador-imagem {
+
+        padding:
+            12px;
+    }
+
+    .imagem-grande {
+
+        max-width:
+            96vw;
+
+        max-height:
+            84vh;
+    }
+
+    .fechar-imagem {
+
+        top:
+            10px;
+
+        right:
+            10px;
+
+        width:
+            40px;
+
+        height:
+            40px;
+    }
+
+}
+
+
+/* ================================
+   CELULAR MUITO PEQUENO
+================================ */
+
+@media (max-width: 380px) {
+
+    .header-conteudo {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+    }
+
+    .header-imagens {
+
+        justify-content:
+            center;
+    }
+
+    .header-texto h1 {
+
+        font-size:
+            1.25rem;
+    }
+
+    .header-texto .subtitulo {
+
+        font-size:
+            0.8rem;
+    }
+
+    .header-texto .descricao {
+
+        font-size:
+            0.7rem;
+    }
+
+    .footer-conteudo {
+
+        align-items:
+            center;
+
+        text-align:
+            center;
+    }
+
+}
